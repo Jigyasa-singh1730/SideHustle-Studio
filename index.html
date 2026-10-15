@@ -1,0 +1,178 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SideHustle Studio | AI Listing Creator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
+
+  <nav class="navbar">
+    <a href="#" class="brand">
+      <span class="brand-icon">✳</span>
+      SideHustle<span class="brand-muted">.studio</span>
+    </a>
+    <div class="nav-right">
+      <span class="model-status"><i></i> Open AI Model</span>
+      <a href="#creator" class="nav-link">Create listing ↗</a>
+    </div>
+  </nav>
+
+  <main class="container">
+    <section class="hero">
+      <div class="hero-label"><span>✦</span> YOUR BUSINESS, SUPERCHARGED</div>
+      <h1>Your products deserve<br>
+        <span class="gradient-text">better words.</span>
+      </h1>
+      <p class="hero-description">
+        Turn simple product details into scroll-stopping listings.
+        Your next sale starts with the right words.
+      </p>
+
+      <div class="hero-features">
+        <span>✦ Open-weight AI</span>
+        <span>◈ No paid API key</span>
+        <span>↗ Made for sellers</span>
+      </div>
+
+      <div class="hero-decoration decoration-one">✳</div>
+      <div class="hero-decoration decoration-two">✦</div>
+    </section>
+
+    <section class="creator-grid" id="creator">
+      <div class="glass-card input-card">
+        <div class="section-heading">
+          <div class="section-icon">✎</div>
+          <div>
+            <span class="eyebrow">LET'S GET STARTED</span>
+            <h2>Product details</h2>
+          </div>
+          <span class="step-badge">01</span>
+        </div>
+
+        <form id="listingForm">
+          <label for="product">What are you selling?</label>
+          <input id="product" required maxlength="120"
+            placeholder="e.g. Handmade lavender candle">
+
+          <label for="details">Tell us what makes it special</label>
+          <textarea id="details" required maxlength="1000"
+            placeholder="Materials, features, benefits, colours..."></textarea>
+
+          <div class="field-row">
+            <div>
+              <label for="platform">Selling platform</label>
+              <select id="platform">
+                <option>Etsy</option>
+                <option>Instagram Shop</option>
+                <option>Amazon</option>
+                <option>eBay</option>
+              </select>
+            </div>
+            <div>
+              <label for="tone">Brand personality</label>
+              <select id="tone">
+                <option>Friendly and persuasive</option>
+                <option>Professional</option>
+                <option>Creative</option>
+                <option>Premium</option>
+              </select>
+            </div>
+          </div>
+
+          <button type="submit" id="generateBtn" class="generate-btn">
+            <span>✦</span> Generate with AI <span class="button-arrow">↗</span>
+          </button>
+
+          <div class="privacy-note">
+            <span>◈</span>
+            <p>Browser-based AI. No separate paid AI API required.</p>
+          </div>
+        </form>
+      </div>
+
+      <div class="glass-card result-card">
+        <div class="section-heading">
+          <div class="section-icon purple-icon">✧</div>
+          <div>
+            <span class="eyebrow">THE MAGIC HAPPENS HERE</span>
+            <h2>Your listing</h2>
+          </div>
+          <span class="live-badge"><i></i> LIVE</span>
+        </div>
+
+        <div id="status" class="status-message">
+          <div class="empty-art">
+            <div class="orbit orbit-one"></div>
+            <div class="orbit orbit-two"></div>
+            <div class="magic-star">✦</div>
+          </div>
+          <h3>Something brilliant<br>starts here.</h3>
+          <p>Your AI-crafted product title, description and keywords will appear here.</p>
+          <div class="skeleton">
+            <span></span><span></span><span></span>
+          </div>
+        </div>
+
+        <div id="output" hidden>
+          <div class="output-block">
+            <div class="output-heading">
+              <span class="output-number">01</span>
+              <h3>Product title</h3>
+              <button class="copy-btn" data-copy="titleOutput">Copy ↗</button>
+            </div>
+            <p id="titleOutput" class="title-result"></p>
+          </div>
+
+          <div class="output-block">
+            <div class="output-heading">
+              <span class="output-number">02</span>
+              <h3>Description</h3>
+              <button class="copy-btn" data-copy="descriptionOutput">Copy ↗</button>
+            </div>
+            <p id="descriptionOutput" class="description-result"></p>
+          </div>
+
+          <div class="output-block">
+            <div class="output-heading">
+              <span class="output-number">03</span>
+              <h3>Search keywords</h3>
+              <button class="copy-btn" data-copy="keywordsOutput">Copy ↗</button>
+            </div>
+            <p id="keywordsOutput" class="keywords-result"></p>
+          </div>
+
+          <button id="downloadBtn" class="download-btn">
+            ↓ &nbsp; Download your listing
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="bottom-banner">
+      <div class="banner-symbol">⌘</div>
+      <div>
+        <span class="eyebrow">BUILT DIFFERENTLY</span>
+        <h2>Open AI. More freedom. Your business.</h2>
+        <p>Generate drafts in your browser without sending product details to a separate AI API.</p>
+      </div>
+      <a href="#creator" class="banner-link">Try it out ↑</a>
+    </section>
+
+    <footer>
+      <a href="#" class="brand footer-brand">
+        <span class="brand-icon">✳</span> SideHustle<span class="brand-muted">.studio</span>
+      </a>
+      <p>Built with open-source AI · Made for the makers.</p>
+    </footer>
+  </main>
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>
